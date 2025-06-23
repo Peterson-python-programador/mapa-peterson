@@ -3,7 +3,7 @@ from geopy.geocoders import Nominatim
 import requests
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='Templates')
 api_key = os.environ.get('OPENWEATHER_API_KEY', "50979750b866729860a7abbaead38728")
 
 def buscar_localizacao(nome_lugar):
